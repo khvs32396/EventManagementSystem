@@ -1,0 +1,121 @@
+/* Global base styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #f1f5f9, #e0e7ff); /* light gradient */
+  color: #1f2937;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* App container stretches full height */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navbar styling */
+.navbar {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 16px 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Content area takes remaining space */
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 20px;
+  animation: fadeSlide 0.8s ease-in-out;
+}
+
+/* Footer styling */
+.footer {
+  width: 100%;
+  padding: 16px 24px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  font-size: 0.95rem;
+  color: #4b5563;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.03);
+}
+
+/* Cards - light glassmorphic look */
+.card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(14px);
+  border-radius: 16px;
+  padding: 28px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeSlide 1s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.015);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+/* Buttons - soft animated styles */
+button {
+  background-color: #4f46e5;
+  color: #ffffff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(79, 70, 229, 0.3);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #4338ca;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(67, 56, 202, 0.4);
+}
+
+/* Utility spacing */
+.mt-1 { margin-top: 0.25rem; }
+.mt-2 { margin-top: 0.5rem; }
+.mt-3 { margin-top: 1rem; }
+.mt-4 { margin-top: 1.5rem; }
+.mt-5 { margin-top: 3rem; }
+
+.text-center { text-align: center; }
+
+/* Links */
+a {
+  color: #6366f1;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #4338ca;
+  text-shadow: 0 0 4px rgba(99, 102, 241, 0.4);
+  text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
